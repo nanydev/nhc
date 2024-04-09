@@ -50,6 +50,11 @@ body {
   padding-inline: 2.4rem;
 }
 
+.wrapper-img {
+  height: 10rem;
+  padding: 2rem
+}
+
 ul {
   list-style: none;
 }
