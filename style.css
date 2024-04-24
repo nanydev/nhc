@@ -55,6 +55,17 @@ body {
   padding: 2rem
 }
 
+.wrapper ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilo para cada item da lista */
+.wrapper li {
+    display: inline-block;
+    margin-right: 10px; /* Espaço entre os itens (opcional) */
+}
+
 ul {
   list-style: none;
 }
