@@ -12,7 +12,7 @@
     <title>Nobre Home Care - Cliente</title>
 
     <link rel="icon" type="image/png" href="./assets/NobreHomeCare-icone.jpg" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="layout.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -186,11 +186,11 @@
         </div>
       </nav>
   
-      <section id="home" class="flex justify-center items-center h-screen">
+<section id="home" class="flex justify-center items-center min-h-screen">
   
-        <div class="w-full max-w-lg p-6 bg-white rounded shadow-lg text-left"> <!-- Adicionada a classe "text-left" para alinhar o texto à esquerda -->
-            <h1 class="text-3xl font-bold text-green-900 mb-4">Seja Cliente</h1>
-            <br><br>
+    <div class="w-full max-w-lg p-6 bg-white rounded shadow-lg text-left mb-8"> <!-- Adicionada a classe "mb-8" para adicionar margem inferior -->
+        <h1 class="text-3xl font-bold text-green-900 mb-4">Seja Cliente</h1>
+        <br><br>
     
             <!-- Formulário -->
             <form action="https://formsubmit.co/the.nany.dev@gmail.com" method="POST">
@@ -200,26 +200,16 @@
     
                 <!-- Grupo de campos -->
                 <div class="mb-4">
-                    <label for="nome" class="block mb-2 font-semibold text-green-900">Nome</label>
+                    <label for="nome" class="block mb-2 font-semibold text-green-900">Nome Completo</label>
                     <input type="text" name="nome" id="nome" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
                 </div>
     
                 <!-- Grupo de campos -->
                 <div class="mb-4">
-                    <label for="sobrenome" class="block mb-2 font-semibold text-green-900">Sobrenome</label>
-                    <input type="text" name="sobrenome" id="sobrenome" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
-                </div>
-
-                <!-- <div class="mb-4">
-                  <label for="idade" class="block mb-2 font-semibold text-green-900">Idade</label>
+                  <label for="number" class="block mb-2 font-semibold text-green-900">Idade</label>
                   <input type="number" name="idade" id="idade" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
-              </div> -->
-
-              <div class="mb-4">
-                <label for="date" class="block mb-2 font-semibold text-green-900">Data de Nascimento</label>
-                <input type="date" name="idade" id="idade" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
-            </div>
-    
+              </div>
+                
                 <!-- Grupo de campos -->
                 <div class="mb-4">
                     <label for="email" class="block mb-2 font-semibold text-green-900">Email</label>
@@ -228,53 +218,61 @@
     
                 <!-- Grupo de campos -->
                 <div class="mb-4">
-                    <label for="sexo" class="block mb-2 font-semibold text-green-900">Sexo</label>
-                    <select id="sexo" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
-                        <option selected disabled value="">Selecione</option>
-                        <option>Feminino</option>
-                        <option>Masculino</option>
-                        <option>Prefiro Não Informar</option>
-                    </select>
-                </div>
-    
+                  <label for="sexo" class="block mb-2 font-semibold text-green-900">Sexo</label>
+                  <div required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+                    <label for="sexo" class="mr-4">
+                      <input type="radio" name="sexo" value="feminino" checked class="mr-1">Feminino
+                  </label>
+                  <label for="sexo" class="mr-4">
+                      <input type="radio" name="sexo" value="sexo" class="mr-1">Masculino
+                  </label><br>
+                  <label for="sexo" class="mr-4">
+                      <input type="radio" name="sexo" value="sexo" class="mr-1">Prefiro Não Informar
+                  </label>
+
+                  </div>
+              </div>
+              <br>
                 <!-- Grupo de campos -->
-                  <div class="mb-4">
-                    <label class="block mb-2 font-semibold text-green-900">Selecione as condições clínicas do paciente:</label>
+                <div class="mb-4">
+                    <label class="block mb-2 font-semibold text-green-900" >Selecione as condições clínicas do paciente:</label>
                     <div>
-                        <input type="checkbox" id="procedimento1" name="procedimento1" value="HTML" class="mr-2">
+                        <input type="checkbox" name="procedimento" value="Sonda" class="mr-2">
                         <label for="procedimento1" class="mr-4">Uso de Sonda</label>
     
-                        <input type="checkbox" id="procedimento2" name="procedimento2" value="CSS" class="mr-2">
+                        <input type="checkbox" name="procedimento" value="TQT" class="mr-2">
                         <label for="procedimento2" class="mr-4">Uso de TQT</label>
-    
-                        <input type="checkbox" id="procedimento3" name="procedimento3" value="JavaScript" class="mr-2">
+                      <br>
+                        <input type="checkbox" name="procedimento" value="Cadeirante" class="mr-2">
                         <label for="procedimento3" class="mr-4">Cadeirante</label>
     
-                        <input type="checkbox" id="procedimento4" name="procedimento4" value="PHP" class="mr-2">
+                        <input type="checkbox" name="procedimento" value="Curativo" class="mr-2">
                         <label for="procedimento4" class="mr-4">Uso de Curativo</label>
-    
-                        <input type="checkbox" id="procedimento5" name="procedimento5" value="C#" class="mr-2">
+                      <br>
+                        <input type="checkbox" name="procedimento" value="Fralda" class="mr-2">
                         <label for="procedimento5" class="mr-4">Uso de Fralda</label>
     
-                        <input type="checkbox" id="procedimento6" name="procedimento6" value="Python" class="mr-2">
+                        <input type="checkbox" name="procedimento" value="Outro" class="mr-2">
                         <label for="procedimento6" class="mr-4">Outro</label>
-    
                     </div>
-                </div> 
+                </div>
     
                 <!-- Grupo de campos -->
                 <div class="mb-4">
                     <label for="experiencia" class="block mb-2 font-semibold text-green-900">Conte um pouco mais sobre você:</label>
-                    <textarea rows="6" id="experiencia" name="experiencia" class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500"></textarea>
+                    <textarea rows="6" id="experiencia" name="experiencia" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500"></textarea>
                 </div>
     
                 <!-- Botão para enviar o formulário -->
-                <button type="submit" class="w-full bg-green-900 text-white py-2 px-4 rounded hover:bg-green-700">Concluído</button>
-                
+                    <button type="submit" class="block mx-auto bg-green-900 hover:bg-green-800 text-white font-semibold py-2 px-4 rounded-full transform hover:scale-110 transition-transform">Concluído</button>
+
             </form>
         </div>
+
+        
     
     </section>
+    
 
   
       <footer>
