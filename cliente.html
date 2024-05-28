@@ -21,6 +21,9 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
         <!-- Link para o arquivo CSS do Tailwind -->
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
@@ -189,32 +192,53 @@
 <section id="home" class="flex justify-center items-center min-h-screen">
   
     <div class="w-full max-w-lg p-6 bg-white rounded shadow-lg text-left mb-8"> <!-- Adicionada a classe "mb-8" para adicionar margem inferior -->
-        <h1 class="text-3xl font-bold text-green-900 mb-4">Seja Cliente</h1>
-        <br><br>
+        <h1 class="text-5xl font-bold text-green-900 mb-4">Orçamento</h1>
+        <br>
+        <h2 class="text-4xl font-bold text-green-900 mb-4">Informações do Responsável:</h2>
+        <br>
     
             <!-- Formulário -->
             <form action="https://formsubmit.co/the.nany.dev@gmail.com" method="POST">
-                <input type="hidden" name="_next" value="https://nanydev.github.io/nhc/sucesso.html">
-                <input type="hidden" name="_autoresponse" value="Recebemos sua mensagem e logo responderemos!! Obrigada.">
-                <input type="hidden" name="_subject" value="Novo Contato!">
+              <input type="hidden" name="_next" value="https://nanydev.github.io/nhc/sucesso.html">
+              <input type="hidden" name="_autoresponse" value="Recebemos sua mensagem e logo responderemos com mais informações. Obrigada!">
+              <input type="hidden" name="_subject" value="Novo Cliente!">
     
                 <!-- Grupo de campos -->
                 <div class="mb-4">
-                    <label for="nome" class="block mb-2 font-semibold text-green-900">Nome Completo</label>
-                    <input type="text" name="nome" id="nome" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+                    <label for="nome" class="block mb-2 font-semibold text-green-900">Nome do Responsável</label>
+                    <input type="text" name="nome do responsável" value="" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
                 </div>
     
                 <!-- Grupo de campos -->
                 <div class="mb-4">
-                  <label for="number" class="block mb-2 font-semibold text-green-900">Idade</label>
-                  <input type="number" name="idade" id="idade" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+                  <label for="celular" class="block mb-2 font-semibold text-green-900">Celular com DDD</label>
+                  <input type="text" name="celular de contato" value="" placeholder="(99) 9 9999-9999" class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+                  <small class="text-gray-500">Formato: (99) 9 9999-9999</small>
               </div>
                 
                 <!-- Grupo de campos -->
                 <div class="mb-4">
                     <label for="email" class="block mb-2 font-semibold text-green-900">Email</label>
-                    <input type="email" name="email" id="email" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+                    <input type="email" name="email de contato" value="" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
                 </div>
+                <br>
+
+                <h2 class="text-4xl font-bold text-green-900 mb-4">Informações do Paciente:</h2>
+
+                <div class="mb-4">
+                  <label for="nome" class="block mb-2 font-semibold text-green-900">Nome do Paciente</label>
+                  <input type="text" name="nome do paciente" value="" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+              </div>
+
+              <div class="mb-4">
+                <label for="idade" class="block mb-2 font-semibold text-green-900">Idade</label>
+                <input type="number" name="idade do paciente" value="" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+            </div>
+
+            <div class="mb-4">
+              <label for="peso" class="block mb-2 font-semibold text-green-900">Peso</label>
+              <input type="number" name="peso do paciente" value="" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+          </div>
     
                 <!-- Grupo de campos -->
                 <div class="mb-4">
@@ -229,47 +253,83 @@
                   <label for="sexo" class="mr-4">
                       <input type="radio" name="sexo" value="sexo" class="mr-1">Prefiro Não Informar
                   </label>
-
                   </div>
               </div>
+
+              <br>
+
+              
+                <h2 class="text-4xl font-bold mb-6 text-green-900">Endereço:</h2>
+        
+                <div class="mb-4">
+                    <label for="cep" class="block mb-2 font-semibold text-green-900">CEP</label>
+                    <input type="text" name="cep do endereço" value="" required pattern="\d{5}-\d{3}" placeholder="00000-000" class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+                </div>
+
+                <div class="mb-4">
+                  <label for="rua" class="block mb-2 font-semibold text-green-900">Rua</label>
+                  <input type="text" name="rua do endereço" value="" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+              </div>
+
+              <div class="mb-4">
+                <label for="numero" class="block mb-2 font-semibold text-green-900">Número</label>
+                <input type="text" name="numero do endereço" value="" class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+            </div>
+        
+                <div class="mb-4">
+                    <label for="bairro" class="block mb-2 font-semibold text-green-900">Bairro</label>
+                    <input type="text" name="bairro do endereço" value="" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+                </div>
+
+                <div class="mb-4">
+                  <label for="complemento" class="block mb-2 font-semibold text-green-900">Complemento</label>
+                  <input type="text" name="complemento do endereço" value="" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+              </div>
+
+                <div class="mb-4">
+                  <label for="cidade" class="block mb-2 font-semibold text-green-900">Cidade</label>
+                  <input type="text" name="cidade do endereço" value="" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500">
+              </div>
+
+              <div class="mb-4">
+                <label class="block mb-2 font-semibold text-green-900" >Selecione as condições clínicas do paciente:</label>
+                <div>
+                    <input type="checkbox" name="procedimento" value="Uso de Sonda" class="mr-2">
+                    <label for="procedimento1" class="mr-4">Uso de Sonda</label>
+
+                    <input type="checkbox" name="procedimento" value="Uso de TQT" class="mr-2">
+                    <label for="procedimento2" class="mr-4">Uso de TQT</label>
+                  <br>
+                    <input type="checkbox" name="procedimento" value="Cadeirante" class="mr-2">
+                    <label for="procedimento3" class="mr-4">Cadeirante</label>
+
+                    <input type="checkbox" name="procedimento" value="Possui de Curativo" class="mr-2">
+                    <label for="procedimento4" class="mr-4">Possui de Curativo</label>
+                  <br>
+                    <input type="checkbox" name="procedimento" value="Uso de Fralda" class="mr-2">
+                    <label for="procedimento5" class="mr-4">Uso de Fralda</label>
+
+                    <input type="checkbox" name="procedimento" value="Outro" class="mr-2">
+                    <label for="procedimento6" class="mr-4">Outro</label>
+                </div>
+
+                <br>
+
+
+            
+
+            <!-- Botão para enviar o formulário -->
+                <button type="submit" class="block mx-auto bg-green-900 hover:bg-green-800 text-white font-semibold py-2 px-4 rounded-full transform hover:scale-110 transition-transform">Concluído</button>
+
+        </form>
+        
+    </div>
+            </div>
+    
+            
               <br>
                 <!-- Grupo de campos -->
-                <div class="mb-4">
-                    <label class="block mb-2 font-semibold text-green-900" >Selecione as condições clínicas do paciente:</label>
-                    <div>
-                        <input type="checkbox" name="procedimento" value="Sonda" class="mr-2">
-                        <label for="procedimento1" class="mr-4">Uso de Sonda</label>
-    
-                        <input type="checkbox" name="procedimento" value="TQT" class="mr-2">
-                        <label for="procedimento2" class="mr-4">Uso de TQT</label>
-                      <br>
-                        <input type="checkbox" name="procedimento" value="Cadeirante" class="mr-2">
-                        <label for="procedimento3" class="mr-4">Cadeirante</label>
-    
-                        <input type="checkbox" name="procedimento" value="Curativo" class="mr-2">
-                        <label for="procedimento4" class="mr-4">Uso de Curativo</label>
-                      <br>
-                        <input type="checkbox" name="procedimento" value="Fralda" class="mr-2">
-                        <label for="procedimento5" class="mr-4">Uso de Fralda</label>
-    
-                        <input type="checkbox" name="procedimento" value="Outro" class="mr-2">
-                        <label for="procedimento6" class="mr-4">Outro</label>
-                    </div>
-                </div>
-    
-                <!-- Grupo de campos -->
-                <div class="mb-4">
-                    <label for="experiencia" class="block mb-2 font-semibold text-green-900">Conte um pouco mais sobre você:</label>
-                    <textarea rows="6" id="experiencia" name="experiencia" required class="w-full px-3 py-2 border rounded focus:outline-none focus:border-green-500"></textarea>
-                </div>
-    
-                <!-- Botão para enviar o formulário -->
-                    <button type="submit" class="block mx-auto bg-green-900 hover:bg-green-800 text-white font-semibold py-2 px-4 rounded-full transform hover:scale-110 transition-transform">Concluído</button>
 
-            </form>
-        </div>
-
-        
     
     </section>
     
@@ -282,7 +342,7 @@
             <p>
               ©2024 NanyDev. <br />
               Todos os direitos reservados. <br />
-              CNPJ: 00.000.000/0000-00.
+              CNPJ: 53.687.487/0001-99.
             </p>
           </div>
   
@@ -400,7 +460,14 @@
   
       <!--ScrollReveal Library-->
       <script src="https://unpkg.com/scrollreveal"></script>
+      <div>whatsapp</div>
   
       <script src="main.js"></script>
+
+      <!-- Botão flutuante do WhatsApp -->
+      <a href="https://wa.me/5511963000137" target="_blank" class="fixed bottom-4 left-4 bg-green-500 text-white p-7 rounded-full shadow-lg hover:bg-green-600 focus:outline-none focus:bg-green-700">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+  
     </body>
 </html>
