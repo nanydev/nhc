@@ -2,7 +2,7 @@ window.addEventListener('scroll', onScroll)
 
 onScroll()
 function onScroll() {
-  //criar função
+  
   showNavOnScrow()
   showBackToTopButton()
 
@@ -15,23 +15,17 @@ function onScroll() {
 }
 
 function activaMenuAtCurrentSection(section) {
-  // linha alvo
+  
   const targetLine = scrollY + innerHeight / 2
 
-  // verificar se a seção passou da linha
-  // quais dados ou precisar?
-
-  // o topo da seção
   const sectionTop = section.offsetTop
   const sectionHeigth = section.offsetHeight
   const sectionTopReachOrPassedTargetline = targetLine >= sectionTop
 
-  // verificar se a base está abaixo da linha alvo
 
   const sectionEndsAt = sectionTop + sectionHeigth
   const sectionEndPassedTargetline = sectionEndsAt <= targetLine
 
-  // limites da seção
   const sectionBoundaries =
     sectionTopReachOrPassedTargetline && !sectionEndPassedTargetline
 

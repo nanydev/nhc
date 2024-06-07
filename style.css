@@ -150,7 +150,7 @@ section .content p {
   gap: 3.2rem;
 }
 
-/*custom colors*/
+
 #services .card circle {
   fill: var(--brand-light);
 }
@@ -214,7 +214,7 @@ body.menu-expanded {
 }
 
 body.menu-expanded > :not(nav) {
-  /*todos do primeiro nível, exceto o nav*/
+
   visibility: hidden;
 }
 
@@ -650,7 +650,7 @@ footer .social-links {
   }
 
   #home .wrapper {
-    grid-template-columns: 60.5rem 1fr; /*tamanho normal+fração*/
+    grid-template-columns: 60.5rem 1fr;
     grid-template-areas:
       'A B'
       'C C';
@@ -678,7 +678,7 @@ footer .social-links {
   }
 
   #home .stats .stat + .stat {
-    /*stat que anterior a ele contenha outro stat*/
+    
     border-left: 1px solid var(--primary-color);
   }
 
